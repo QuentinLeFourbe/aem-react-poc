@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Cards",
+        "path": "/tools/sidekick/blocks/cards"
+    },
+    {
+        "name": "Columns",
+        "path": "/tools/sidekick/blocks/columns"
+    },
+    {
+        "name": "Hero",
+        "path": "/tools/sidekick/blocks/hero"
+    }
+]
