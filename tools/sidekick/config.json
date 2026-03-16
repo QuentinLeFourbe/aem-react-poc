@@ -1,0 +1,15 @@
+{
+  "project": "AEM React POC",
+  "plugins": [
+    {
+      "id": "library",
+      "button": {
+        "text": "Library",
+        "action": {
+          "type": "open",
+          "url": "/tools/sidekick/library/library.html"
+        }
+      }
+    }
+  ]
+}
