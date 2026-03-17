@@ -1,0 +1,31 @@
+.card {
+  background-color: #ffe6ea; /* Light pink background */
+  border: 1px solid #f8bbd0; /* Darker pink border */
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.1);
+  max-width: 400px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(233, 30, 99, 0.2);
+}
+
+.card h3 {
+  color: #880e4f; /* Dark pink/purple text */
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.card p {
+  color: #ad1457; /* Medium pink text */
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
