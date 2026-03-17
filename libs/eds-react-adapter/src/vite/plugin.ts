@@ -69,17 +69,24 @@ export function edsReactPlugin(options: EdsReactPluginOptions = {}): Plugin[] {
       }
 
       return {
+        define: {
+          'process.env.NODE_ENV': JSON.stringify('production'),
+        },
         build: {
           outDir,
           emptyOutDir: false,
+          cssCodeSplit: true,
+          lib: {
+            entry: input,
+            formats: ['es'],
+          },
           rollupOptions: {
-            input,
             output: {
               entryFileNames: (chunk) => `${chunk.name}/${chunk.name}.js`,
               assetFileNames: (asset) => {
                 if (asset.name?.endsWith('.css')) {
-                  const name = asset.name.replace(/\.css$/, '').toLowerCase();
-                  return `${name}/${name}.css`;
+                  const baseName = path.basename(asset.name, '.css').toLowerCase();
+                  return `${baseName}/${baseName}.css`;
                 }
                 return 'assets/[name]-[hash][extname]';
               },
