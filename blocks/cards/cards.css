@@ -1,45 +1,35 @@
-.cards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 32px;
-}
-
-.cards > ul > li {
-  border: 1px solid #eee;
-  background-color: var(--background-color);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 10%), 0 2px 4px -1px rgb(0 0 0 / 6%);
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-  overflow: hidden;
+.cards {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
-.cards > ul > li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%);
+.cards .card-content {
+  background-color: #ffe6ea; /* Light pink background */
+  border: 1px solid #f8bbd0; /* Darker pink border */
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(233, 30, 99, 0.1);
+  max-width: 400px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
 }
 
-.cards .cards-card-body {
-  margin: 0;
-  padding: 24px;
-  flex: 1;
+.cards .card-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(233, 30, 99, 0.2);
 }
 
-.cards .cards-card-body p:last-child {
-  margin-bottom: 0;
+.cards h3 {
+  color: #880e4f; /* Dark pink/purple text */
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-.cards .cards-card-image {
-  line-height: 0;
+.cards .card-description {
+  color: #ad1457; /* Medium pink text */
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
-.cards > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
-}

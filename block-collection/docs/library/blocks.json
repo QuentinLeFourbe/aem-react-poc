@@ -6,37 +6,37 @@
     "data": [
       {
         "name": "Cards",
-        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/cards.html",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/cards",
         "features": "",
         "focal-point": ""
       },
       {
         "name": "Columns",
-        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/columns.html",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/columns",
         "features": "",
         "focal-point": ""
       },
       {
         "name": "Footer",
-        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/footer.html",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/footer",
         "features": "",
         "focal-point": ""
       },
       {
         "name": "Fragment",
-        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/fragment.html",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/fragment",
         "features": "",
         "focal-point": ""
       },
       {
         "name": "Header",
-        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/header.html",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/header",
         "features": "",
         "focal-point": ""
       },
       {
         "name": "Hero",
-        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/hero.html",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/hero",
         "features": "",
         "focal-point": ""
       }
