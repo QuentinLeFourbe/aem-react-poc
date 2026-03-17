@@ -1,0 +1,57 @@
+{
+  "data": {
+    "total": 6,
+    "limit": 6,
+    "offset": 0,
+    "data": [
+      {
+        "name": "Cards",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/docs/library/blocks/cards",
+        "features": "",
+        "focal-point": ""
+      },
+      {
+        "name": "Columns",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/docs/library/blocks/columns",
+        "features": "",
+        "focal-point": ""
+      },
+      {
+        "name": "Footer",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/docs/library/blocks/footer",
+        "features": "",
+        "focal-point": ""
+      },
+      {
+        "name": "Fragment",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/docs/library/blocks/fragment",
+        "features": "",
+        "focal-point": ""
+      },
+      {
+        "name": "Header",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/docs/library/blocks/header",
+        "features": "",
+        "focal-point": ""
+      },
+      {
+        "name": "Hero",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/docs/library/blocks/hero",
+        "features": "",
+        "focal-point": ""
+      }
+    ]
+  },
+  "options": {
+    "total": 0,
+    "limit": 0,
+    "offset": 0,
+    "data": []
+  },
+  ":names": [
+    "data",
+    "options"
+  ],
+  ":version": 3,
+  ":type": "multi-sheet"
+}
