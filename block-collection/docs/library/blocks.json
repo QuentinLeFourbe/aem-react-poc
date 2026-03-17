@@ -6,37 +6,37 @@
     "data": [
       {
         "name": "Cards",
-        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/docs/library/blocks/cards",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/cards.html",
         "features": "",
         "focal-point": ""
       },
       {
         "name": "Columns",
-        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/docs/library/blocks/columns",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/columns.html",
         "features": "",
         "focal-point": ""
       },
       {
         "name": "Footer",
-        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/docs/library/blocks/footer",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/footer.html",
         "features": "",
         "focal-point": ""
       },
       {
         "name": "Fragment",
-        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/docs/library/blocks/fragment",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/fragment.html",
         "features": "",
         "focal-point": ""
       },
       {
         "name": "Header",
-        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/docs/library/blocks/header",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/header.html",
         "features": "",
         "focal-point": ""
       },
       {
         "name": "Hero",
-        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/docs/library/blocks/hero",
+        "path": "https://content.da.live/QuentinLeFourbe/aem-react-poc/block-collection/docs/library/blocks/hero.html",
         "features": "",
         "focal-point": ""
       }
