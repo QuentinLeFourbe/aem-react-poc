@@ -1,0 +1,31 @@
+{
+  "name": "eds-react-adapter",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Plug-and-play adapter to build AEM Edge Delivery Services blocks with React",
+  "exports": {
+    ".": "./src/runtime/index.ts",
+    "./vite": "./src/vite/plugin.ts"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "tsup": "^8.5.1",
+    "typescript": "~5.9.3",
+    "vite": "^8.0.0"
+  }
+}
