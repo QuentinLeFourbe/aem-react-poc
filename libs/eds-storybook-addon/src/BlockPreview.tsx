@@ -19,8 +19,7 @@ export function BlockPreview({ blockName, rows, decorate }: BlockPreviewProps) {
       .map((row) => `<div>${row.map((cell) => `<div>${cell}</div>`).join('')}</div>`)
       .join('');
     decorate(ref.current);
-  // Re-run whenever rows change (DA table edits in the panel)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // `decorate` is intentionally excluded from deps — it's a stable function from defineBlock.
   }, [rows]);
 
   return <div ref={ref} className={`${blockName} block`} />;
