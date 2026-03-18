@@ -27,10 +27,11 @@ interface CellsBlockConfig {
 
 /**
  * Custom block definition using a manual decorate function.
+ * Supports both sync and async decorate functions.
  */
 interface CustomBlockConfig<P> {
   cells?: never;
-  decorate: (block: HTMLElement) => P;
+  decorate: (block: HTMLElement) => P | Promise<P>;
 }
 
 type BlockConfig<P> = CellsBlockConfig | CustomBlockConfig<P>;
@@ -88,10 +89,10 @@ function extractProps(
 export function defineBlock<P extends Record<string, any>>(
   Component: ComponentType<P>,
   config: BlockConfig<P>,
-): (block: HTMLElement) => void {
-  return (block: HTMLElement) => {
+): (block: HTMLElement) => Promise<void> {
+  return async (block: HTMLElement) => {
     const props = config.decorate
-      ? config.decorate(block)
+      ? await config.decorate(block)
       : extractProps(block, config.cells!);
 
     renderBlock(block, Component, props as P);

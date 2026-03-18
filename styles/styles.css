@@ -36,8 +36,10 @@
   --heading-font-size-s: 24px;
   --heading-font-size-xs: 22px;
 
-  /* nav height */
-  --nav-height: 64px;
+  /* sidebar */
+  --sidebar-width: 260px;
+  --sidebar-bg: #1e293b;
+  --sidebar-text: #cbd5e1;
 }
 
 /* fallback fonts */
@@ -78,6 +80,15 @@ body {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
+  /* space for the mobile toggle button */
+  padding-top: 68px;
+}
+
+@media (width >= 900px) {
+  body {
+    padding-top: 0;
+    padding-left: var(--sidebar-width);
+  }
 }
 
 body.appear {
@@ -85,7 +96,10 @@ body.appear {
 }
 
 header {
-  height: var(--nav-height);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
 }
 
 header .header,

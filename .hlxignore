@@ -1,8 +1,6 @@
-.*
-*.md
-karma.config.js
-LICENSE
-package.json
-package-lock.json
-test/*
-libs/*
+# Block source files – not to be served by AEM
+libs/
+node_modules/
+
+# Leftover hashed chunk files from old builds
+blocks/jsx-runtime-*.js

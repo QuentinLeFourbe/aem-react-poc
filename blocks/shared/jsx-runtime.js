@@ -46,8 +46,8 @@ function x(e, t) {
 	return n;
 }
 function S(e, t) {
-	return (n) => {
-		f(n, e, t.decorate ? t.decorate(n) : x(n, t.cells));
+	return async (n) => {
+		f(n, e, t.decorate ? await t.decorate(n) : x(n, t.cells));
 	};
 }
 //#endregion
