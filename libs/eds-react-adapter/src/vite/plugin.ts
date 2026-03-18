@@ -81,7 +81,6 @@ export function edsReactPlugin(options: EdsReactPluginOptions = {}): Plugin[] {
             formats: ['es'],
           },
           rollupOptions: {
-            external: ['react', 'react-dom', 'react-dom/client', 'react/jsx-runtime', '@tanstack/react-query'],
             output: {
               entryFileNames: (chunk) => `${chunk.name}/${chunk.name}.js`,
               chunkFileNames: 'shared/[name].js',
@@ -91,6 +90,16 @@ export function edsReactPlugin(options: EdsReactPluginOptions = {}): Plugin[] {
                   return `${baseName}/${baseName}.css`;
                 }
                 return 'assets/[name]-[hash][extname]';
+              },
+              manualChunks(id) {
+                if (!id.includes('node_modules')) return undefined;
+                // Resolve real package name from pnpm's nested node_modules structure
+                const parts = id.split('/node_modules/');
+                const pkgPath = parts[parts.length - 1];
+                const pkg = pkgPath.startsWith('@')
+                  ? pkgPath.split('/').slice(0, 2).join('/') // @scope/name
+                  : pkgPath.split('/')[0]; // name
+                return `vendor/${pkg.replace(/^@/, '').replace('/', '-')}`;
               },
             },
           },
