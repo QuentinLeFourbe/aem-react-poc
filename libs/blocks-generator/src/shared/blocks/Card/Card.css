@@ -2,7 +2,7 @@
   background-color: #ffe6ea; /* Light pink background */
   border: 1px solid #f8bbd0; /* Darker pink border */
   border-radius: 12px;
-  padding: 32px;
+  overflow: hidden;
   box-shadow: 0 4px 12px rgba(233, 30, 99, 0.1);
   max-width: 400px;
   transition:
@@ -20,11 +20,18 @@
   box-shadow: 0 8px 16px rgba(233, 30, 99, 0.2);
 }
 
+.card-image picture,
+.card-image img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
 .card h3 {
   color: #2e7d32; /* Green text */
-  margin-top: 0;
-  margin-bottom: 16px;
-  font-size: 3.5rem;
+  margin: 16px 32px 8px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -33,5 +40,5 @@
   color: #1565c0; /* Blue text */
   font-size: 1rem;
   line-height: 1.6;
-  margin: 0;
+  margin: 0 32px 32px;
 }

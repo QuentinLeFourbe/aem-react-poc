@@ -89,9 +89,10 @@ export function edsReactPlugin(options: EdsReactPluginOptions = {}): Plugin[] {
             formats: ['es'],
           },
           rollupOptions: {
-            external: ['preact', 'preact/compat', 'preact/compat/client', 'preact/jsx-runtime', 'preact/hooks'],
+            external: ['preact', 'preact/compat', 'preact/compat/client', 'preact/jsx-runtime', 'preact/hooks', '@tanstack/react-query'],
             output: {
               entryFileNames: (chunk) => `${chunk.name}/${chunk.name}.js`,
+              chunkFileNames: 'shared/[name].js',
               assetFileNames: (asset) => {
                 if (asset.name?.endsWith('.css')) {
                   const baseName = path.basename(asset.name, '.css').toLowerCase();
