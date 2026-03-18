@@ -16,7 +16,9 @@ function Sidebar({ brand, links, currentPath }: HeaderProps) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handler = (e: KeyboardEvent) => { if (e.key === 'Escape') setOpen(false); };
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
     document.addEventListener('keydown', handler);
     return () => document.removeEventListener('keydown', handler);
   }, []);
@@ -38,17 +40,9 @@ function Sidebar({ brand, links, currentPath }: HeaderProps) {
         <span className="sidebar-toggle-icon" />
       </button>
 
-      {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
-      <div
-        className={`sidebar-overlay${open ? ' active' : ''}`}
-        onClick={() => setOpen(false)}
-      />
+      <div className={`sidebar-overlay${open ? ' active' : ''}`} onClick={() => setOpen(false)} />
 
-      <div
-        id="sidebar"
-        className="sidebar"
-        aria-expanded={open}
-      >
+      <div id="sidebar" className="sidebar" aria-expanded={open}>
         <div className="sidebar-brand">
           <a href={brand.href}>{brand.label}</a>
         </div>
@@ -57,10 +51,7 @@ function Sidebar({ brand, links, currentPath }: HeaderProps) {
           <ul>
             {links.map((link) => (
               <li key={link.href}>
-                <a
-                  href={link.href}
-                  aria-current={link.href === currentPath ? 'page' : undefined}
-                >
+                <a href={link.href} aria-current={link.href === currentPath ? 'page' : undefined}>
                   {link.label}
                 </a>
               </li>
@@ -75,7 +66,12 @@ function Sidebar({ brand, links, currentPath }: HeaderProps) {
 export default defineBlock(Sidebar, {
   async decorate() {
     const res = await fetch('/nav.plain.html');
-    if (!res.ok) return { brand: { href: '/', label: 'Home' }, links: [], currentPath: window.location.pathname };
+    if (!res.ok)
+      return {
+        brand: { href: '/', label: 'Home' },
+        links: [],
+        currentPath: window.location.pathname,
+      };
 
     const html = await res.text();
     const parser = new DOMParser();

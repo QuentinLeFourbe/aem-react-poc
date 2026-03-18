@@ -13,6 +13,7 @@ export default [
       '**/*.min.js',
       'scripts/**',
       'blocks/**',
+      'libs/vendor/**',
     ],
   },
   // AEM JS Configuration
