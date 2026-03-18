@@ -1,27 +1,28 @@
-import { n as e, t } from "../shared/jsx-runtime.js";
+import { t as e } from "../shared/runtime.js";
+import { jsx as t, jsxs as n } from "react/jsx-runtime";
 //#region src/shared/blocks/Cards/Cards.tsx
-function n({ image: e, title: n, description: r }) {
-	return /* @__PURE__ */ (0, t.jsxs)("div", {
+function r({ image: e, title: r, description: i }) {
+	return /* @__PURE__ */ n("div", {
 		className: "cards-item",
-		children: [e && /* @__PURE__ */ (0, t.jsx)("div", {
+		children: [e && /* @__PURE__ */ t("div", {
 			className: "cards-item-image",
 			dangerouslySetInnerHTML: { __html: e }
-		}), /* @__PURE__ */ (0, t.jsxs)("div", {
+		}), /* @__PURE__ */ n("div", {
 			className: "cards-item-body",
-			children: [/* @__PURE__ */ (0, t.jsx)("h3", { children: n }), r && /* @__PURE__ */ (0, t.jsx)("div", {
+			children: [/* @__PURE__ */ t("h3", { children: r }), i && /* @__PURE__ */ t("div", {
 				className: "cards-item-description",
-				dangerouslySetInnerHTML: { __html: r }
+				dangerouslySetInnerHTML: { __html: i }
 			})]
 		})]
 	});
 }
-function r({ items: e }) {
-	return /* @__PURE__ */ (0, t.jsx)("ul", {
+function i({ items: e }) {
+	return /* @__PURE__ */ t("ul", {
 		className: "cards-grid",
-		children: e.map((e, r) => /* @__PURE__ */ (0, t.jsx)("li", { children: /* @__PURE__ */ (0, t.jsx)(n, { ...e }) }, r))
+		children: e.map((e, n) => /* @__PURE__ */ t("li", { children: /* @__PURE__ */ t(r, { ...e }) }, n))
 	});
 }
-var i = e(r, { decorate: (e) => ({ items: [...e.querySelectorAll(":scope > div")].map((e) => {
+var a = e(i, { decorate: (e) => ({ items: [...e.querySelectorAll(":scope > div")].map((e) => {
 	let t = e.querySelector(":scope > div"), n = t?.cloneNode(!0), r = t?.querySelector("picture")?.outerHTML ?? "";
 	n?.querySelector("picture")?.remove();
 	let i = n?.querySelector("h1,h2,h3,h4,h5,h6")?.textContent?.trim() ?? "";
@@ -32,4 +33,4 @@ var i = e(r, { decorate: (e) => ({ items: [...e.querySelectorAll(":scope > div")
 	};
 }) }) });
 //#endregion
-export { i as default };
+export { i as Cards, a as default };

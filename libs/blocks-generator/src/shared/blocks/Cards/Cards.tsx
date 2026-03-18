@@ -27,7 +27,7 @@ function CardTile({ image, title, description }: CardItem) {
   );
 }
 
-function Cards({ items }: CardsProps) {
+export function Cards({ items }: CardsProps) {
   return (
     <ul className="cards-grid">
       {items.map((item, i) => (

@@ -1,49 +1,50 @@
-import { n as e, t } from "../shared/jsx-runtime.js";
-import { useEffect as n, useState as r } from "preact/compat";
+import { t as e } from "../shared/runtime.js";
+import { useEffect as t, useState as n } from "react";
+import { Fragment as r, jsx as i, jsxs as a } from "react/jsx-runtime";
 //#region src/shared/blocks/Header/Header.tsx
-function i({ brand: e, links: i, currentPath: a }) {
-	let [o, s] = r(!1);
-	return n(() => {
+function o({ brand: e, links: o, currentPath: s }) {
+	let [c, l] = n(!1);
+	return t(() => {
 		let e = (e) => {
-			e.key === "Escape" && s(!1);
+			e.key === "Escape" && l(!1);
 		};
 		return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
-	}, []), n(() => (document.body.classList.toggle("nav-open", o), () => document.body.classList.remove("nav-open")), [o]), /* @__PURE__ */ (0, t.jsxs)(t.Fragment, { children: [
-		/* @__PURE__ */ (0, t.jsx)("button", {
+	}, []), t(() => (document.body.classList.toggle("nav-open", c), () => document.body.classList.remove("nav-open")), [c]), /* @__PURE__ */ a(r, { children: [
+		/* @__PURE__ */ i("button", {
 			className: "sidebar-toggle",
 			"aria-controls": "sidebar",
-			"aria-expanded": o,
-			"aria-label": o ? "Fermer la navigation" : "Ouvrir la navigation",
-			onClick: () => s((e) => !e),
-			children: /* @__PURE__ */ (0, t.jsx)("span", { className: "sidebar-toggle-icon" })
+			"aria-expanded": c,
+			"aria-label": c ? "Fermer la navigation" : "Ouvrir la navigation",
+			onClick: () => l((e) => !e),
+			children: /* @__PURE__ */ i("span", { className: "sidebar-toggle-icon" })
 		}),
-		/* @__PURE__ */ (0, t.jsx)("div", {
-			className: `sidebar-overlay${o ? " active" : ""}`,
-			onClick: () => s(!1)
+		/* @__PURE__ */ i("div", {
+			className: `sidebar-overlay${c ? " active" : ""}`,
+			onClick: () => l(!1)
 		}),
-		/* @__PURE__ */ (0, t.jsxs)("div", {
+		/* @__PURE__ */ a("div", {
 			id: "sidebar",
 			className: "sidebar",
-			"aria-expanded": o,
-			children: [/* @__PURE__ */ (0, t.jsx)("div", {
+			"aria-expanded": c,
+			children: [/* @__PURE__ */ i("div", {
 				className: "sidebar-brand",
-				children: /* @__PURE__ */ (0, t.jsx)("a", {
+				children: /* @__PURE__ */ i("a", {
 					href: e.href,
 					children: e.label
 				})
-			}), /* @__PURE__ */ (0, t.jsx)("nav", {
+			}), /* @__PURE__ */ i("nav", {
 				className: "sidebar-sections",
 				"aria-label": "Navigation principale",
-				children: /* @__PURE__ */ (0, t.jsx)("ul", { children: i.map((e) => /* @__PURE__ */ (0, t.jsx)("li", { children: /* @__PURE__ */ (0, t.jsx)("a", {
+				children: /* @__PURE__ */ i("ul", { children: o.map((e) => /* @__PURE__ */ i("li", { children: /* @__PURE__ */ i("a", {
 					href: e.href,
-					"aria-current": e.href === a ? "page" : void 0,
+					"aria-current": e.href === s ? "page" : void 0,
 					children: e.label
 				}) }, e.href)) })
 			})]
 		})
 	] });
 }
-var a = e(i, { async decorate() {
+var s = e(o, { async decorate() {
 	let e = await fetch("/nav.plain.html");
 	if (!e.ok) return {
 		brand: {
@@ -67,4 +68,4 @@ var a = e(i, { async decorate() {
 	};
 } });
 //#endregion
-export { a as default };
+export { s as default };

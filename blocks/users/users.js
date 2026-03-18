@@ -1,55 +1,56 @@
-import { n as e, t } from "../shared/jsx-runtime.js";
-import { useQuery as n } from "@tanstack/react-query";
+import { t as e } from "../shared/runtime.js";
+import { useQuery as t } from "@tanstack/react-query";
+import { jsx as n, jsxs as r } from "react/jsx-runtime";
 //#region src/shared/blocks/Users/Users.tsx
-function r({ name: e, email: n, company: r, website: i }) {
-	return /* @__PURE__ */ (0, t.jsxs)("li", {
+function i({ name: e, email: t, company: i, website: a }) {
+	return /* @__PURE__ */ r("li", {
 		className: "users-item",
-		children: [/* @__PURE__ */ (0, t.jsx)("div", {
+		children: [/* @__PURE__ */ n("div", {
 			className: "users-item-avatar",
 			children: e.charAt(0)
-		}), /* @__PURE__ */ (0, t.jsxs)("div", {
+		}), /* @__PURE__ */ r("div", {
 			className: "users-item-info",
 			children: [
-				/* @__PURE__ */ (0, t.jsx)("h3", {
+				/* @__PURE__ */ n("h3", {
 					className: "users-item-name",
 					children: e
 				}),
-				/* @__PURE__ */ (0, t.jsx)("a", {
+				/* @__PURE__ */ n("a", {
 					className: "users-item-email",
-					href: `mailto:${n}`,
-					children: n
+					href: `mailto:${t}`,
+					children: t
 				}),
-				/* @__PURE__ */ (0, t.jsx)("p", {
+				/* @__PURE__ */ n("p", {
 					className: "users-item-company",
-					children: r.name
+					children: i.name
 				}),
-				/* @__PURE__ */ (0, t.jsx)("a", {
+				/* @__PURE__ */ n("a", {
 					className: "users-item-website",
-					href: `https://${i}`,
+					href: `https://${a}`,
 					target: "_blank",
 					rel: "noreferrer",
-					children: i
+					children: a
 				})
 			]
 		})]
 	});
 }
-function i() {
-	let { data: e, isLoading: i, isError: a, error: o } = n({
+function a() {
+	let { data: e, isLoading: a, isError: o, error: s } = t({
 		queryKey: ["users"],
 		queryFn: () => fetch("https://jsonplaceholder.typicode.com/users").then((e) => e.json())
 	});
-	return i ? /* @__PURE__ */ (0, t.jsx)("div", {
+	return a ? /* @__PURE__ */ n("div", {
 		className: "users-loading",
 		children: "Chargement des utilisateurs..."
-	}) : a ? /* @__PURE__ */ (0, t.jsxs)("div", {
+	}) : o ? /* @__PURE__ */ r("div", {
 		className: "users-error",
-		children: ["Erreur : ", o.message]
-	}) : /* @__PURE__ */ (0, t.jsx)("ul", {
+		children: ["Erreur : ", s.message]
+	}) : /* @__PURE__ */ n("ul", {
 		className: "users-grid",
-		children: e?.map((e) => /* @__PURE__ */ (0, t.jsx)(r, { ...e }, e.id))
+		children: e?.map((e) => /* @__PURE__ */ n(i, { ...e }, e.id))
 	});
 }
-var a = e(i, { cells: [] });
+var o = e(a, { cells: [] });
 //#endregion
-export { a as default };
+export { a as Users, o as default };

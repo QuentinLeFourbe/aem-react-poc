@@ -1,35 +1,36 @@
-import { n as e, t } from "../shared/jsx-runtime.js";
+import { t as e } from "../shared/runtime.js";
+import { jsx as t, jsxs as n } from "react/jsx-runtime";
 //#region src/shared/blocks/Hero/Hero.tsx
-function n({ image: e, heading: n, description: r, ctas: i }) {
-	return /* @__PURE__ */ (0, t.jsxs)("section", {
+function r({ image: e, heading: r, description: i, ctas: a }) {
+	return /* @__PURE__ */ n("section", {
 		className: "hero-section",
 		children: [
-			e && /* @__PURE__ */ (0, t.jsx)("div", {
+			e && /* @__PURE__ */ t("div", {
 				className: "hero-bg",
 				dangerouslySetInnerHTML: { __html: e }
 			}),
-			/* @__PURE__ */ (0, t.jsx)("div", { className: "hero-overlay" }),
-			/* @__PURE__ */ (0, t.jsxs)("div", {
+			/* @__PURE__ */ t("div", { className: "hero-overlay" }),
+			/* @__PURE__ */ n("div", {
 				className: "hero-content",
 				children: [
-					n && /* @__PURE__ */ (0, t.jsx)("div", {
+					r && /* @__PURE__ */ t("div", {
 						className: "hero-heading",
-						dangerouslySetInnerHTML: { __html: n }
-					}),
-					r && /* @__PURE__ */ (0, t.jsx)("div", {
-						className: "hero-description",
 						dangerouslySetInnerHTML: { __html: r }
 					}),
-					i && /* @__PURE__ */ (0, t.jsx)("div", {
-						className: "hero-ctas",
+					i && /* @__PURE__ */ t("div", {
+						className: "hero-description",
 						dangerouslySetInnerHTML: { __html: i }
+					}),
+					a && /* @__PURE__ */ t("div", {
+						className: "hero-ctas",
+						dangerouslySetInnerHTML: { __html: a }
 					})
 				]
 			})
 		]
 	});
 }
-var r = e(n, { cells: [
+var i = e(r, { cells: [
 	{
 		name: "image",
 		type: "html"
@@ -48,4 +49,4 @@ var r = e(n, { cells: [
 	}
 ] });
 //#endregion
-export { r as default };
+export { r as Hero, i as default };

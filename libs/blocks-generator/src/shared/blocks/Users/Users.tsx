@@ -26,7 +26,7 @@ function UserCard({ name, email, company, website }: User) {
   );
 }
 
-function Users() {
+export function Users() {
   const { data: users, isLoading, isError, error } = useQuery<User[]>({
     queryKey: ['users'],
     queryFn: () => fetch('https://jsonplaceholder.typicode.com/users').then((r) => r.json()),

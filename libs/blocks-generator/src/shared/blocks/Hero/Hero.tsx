@@ -8,7 +8,7 @@ interface HeroProps {
   ctas: string;
 }
 
-function Hero({
+export function Hero({
   image, heading, description, ctas,
 }: HeroProps) {
   return (

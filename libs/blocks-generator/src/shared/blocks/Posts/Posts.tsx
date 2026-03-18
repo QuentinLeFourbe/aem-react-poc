@@ -1,5 +1,5 @@
 import { defineBlock } from 'eds-react-adapter';
-import { useState, useEffect } from 'preact/hooks';
+import { useState, useEffect } from 'react';
 import './Posts.css';
 
 interface Post {
@@ -13,7 +13,7 @@ interface PostsProps {
   limit: number;
 }
 
-function Posts({ limit }: PostsProps) {
+export function Posts({ limit }: PostsProps) {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

@@ -72,14 +72,6 @@ export function edsReactPlugin(options: EdsReactPluginOptions = {}): Plugin[] {
         define: {
           'process.env.NODE_ENV': JSON.stringify('production'),
         },
-        resolve: {
-          alias: {
-            'react': 'preact/compat',
-            'react-dom': 'preact/compat',
-            'react-dom/client': 'preact/compat/client',
-            'react/jsx-runtime': 'preact/jsx-runtime',
-          },
-        },
         build: {
           outDir,
           emptyOutDir: false,
@@ -89,7 +81,7 @@ export function edsReactPlugin(options: EdsReactPluginOptions = {}): Plugin[] {
             formats: ['es'],
           },
           rollupOptions: {
-            external: ['preact', 'preact/compat', 'preact/compat/client', 'preact/jsx-runtime', 'preact/hooks', '@tanstack/react-query'],
+            external: ['react', 'react-dom', 'react-dom/client', 'react/jsx-runtime', '@tanstack/react-query'],
             output: {
               entryFileNames: (chunk) => `${chunk.name}/${chunk.name}.js`,
               chunkFileNames: 'shared/[name].js',

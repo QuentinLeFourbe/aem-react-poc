@@ -9,6 +9,7 @@
     "lint:fix": "eslint . --fix",
     "format": "prettier --write .",
     "build:blocks": "pnpm --filter blocks-generator build",
+    "storybook": "pnpm --filter blocks-generator storybook",
     "dev:blocks": "pnpm --filter blocks-generator dev"
   },
   "repository": {
