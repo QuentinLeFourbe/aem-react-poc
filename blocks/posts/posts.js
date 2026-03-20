@@ -1,38 +1,41 @@
-import { t as e } from "../shared/runtime.js";
-import { useEffect as t, useState as n } from "react";
-import { jsx as r, jsxs as i } from "react/jsx-runtime";
-//#region src/shared/blocks/Posts/Posts.tsx
-function a({ limit: e }) {
-	let [a, o] = n([]), [s, c] = n(!0), [l, u] = n(null);
-	return t(() => {
+import { n as e } from "../shared/rolldown-runtime.js";
+import { i as t } from "../shared/vendor/ap-design-system.js";
+import "../shared/vendor/react-dom.js";
+import { o as n } from "../shared/vendor/mui-material.js";
+import { t as r } from "../shared/runtime.js";
+//#region src/shared/blocks/Posts/Posts.css
+var i = /* @__PURE__ */ e(t(), 1), a = n();
+function o({ limit: e }) {
+	let [t, n] = (0, i.useState)([]), [r, o] = (0, i.useState)(!0), [s, c] = (0, i.useState)(null);
+	return (0, i.useEffect)(() => {
 		fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${e}`).then((e) => {
 			if (!e.ok) throw Error(`HTTP ${e.status}`);
 			return e.json();
 		}).then((e) => {
-			o(e), c(!1);
+			n(e), o(!1);
 		}).catch((e) => {
-			u(e.message), c(!1);
+			c(e.message), o(!1);
 		});
-	}, [e]), s ? /* @__PURE__ */ r("div", {
+	}, [e]), r ? /* @__PURE__ */ (0, a.jsx)("div", {
 		className: "posts-loading",
 		children: "Chargement..."
-	}) : l ? /* @__PURE__ */ i("div", {
+	}) : s ? /* @__PURE__ */ (0, a.jsxs)("div", {
 		className: "posts-error",
-		children: ["Erreur : ", l]
-	}) : /* @__PURE__ */ r("ul", {
+		children: ["Erreur : ", s]
+	}) : /* @__PURE__ */ (0, a.jsx)("ul", {
 		className: "posts-grid",
-		children: a.map((e) => /* @__PURE__ */ i("li", {
+		children: t.map((e) => /* @__PURE__ */ (0, a.jsxs)("li", {
 			className: "posts-item",
 			children: [
-				/* @__PURE__ */ i("span", {
+				/* @__PURE__ */ (0, a.jsxs)("span", {
 					className: "posts-item-id",
 					children: ["#", e.id]
 				}),
-				/* @__PURE__ */ r("h3", {
+				/* @__PURE__ */ (0, a.jsx)("h3", {
 					className: "posts-item-title",
 					children: e.title
 				}),
-				/* @__PURE__ */ r("p", {
+				/* @__PURE__ */ (0, a.jsx)("p", {
 					className: "posts-item-body",
 					children: e.body
 				})
@@ -40,9 +43,9 @@ function a({ limit: e }) {
 		}, e.id))
 	});
 }
-var o = e(a, { decorate: (e) => {
+var s = r(o, { decorate: (e) => {
 	let t = e.querySelector(":scope > div > div")?.textContent?.trim(), n = t ? parseInt(t, 10) : 10;
 	return { limit: isNaN(n) ? 10 : n };
 } });
 //#endregion
-export { a as Posts, o as default };
+export { o as Posts, s as default };

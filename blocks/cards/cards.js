@@ -1,28 +1,31 @@
-import { t as e } from "../shared/runtime.js";
-import { jsx as t, jsxs as n } from "react/jsx-runtime";
+import "../shared/vendor/ap-design-system.js";
+import "../shared/vendor/react-dom.js";
+import { o as e } from "../shared/vendor/mui-material.js";
+import { t } from "../shared/runtime.js";
 //#region src/shared/blocks/Cards/Cards.tsx
-function r({ image: e, title: r, description: i }) {
-	return /* @__PURE__ */ n("div", {
+var n = e();
+function r({ image: e, title: t, description: r }) {
+	return /* @__PURE__ */ (0, n.jsxs)("div", {
 		className: "cards-item",
-		children: [e && /* @__PURE__ */ t("div", {
+		children: [e && /* @__PURE__ */ (0, n.jsx)("div", {
 			className: "cards-item-image",
 			dangerouslySetInnerHTML: { __html: e }
-		}), /* @__PURE__ */ n("div", {
+		}), /* @__PURE__ */ (0, n.jsxs)("div", {
 			className: "cards-item-body",
-			children: [/* @__PURE__ */ t("h3", { children: r }), i && /* @__PURE__ */ t("div", {
+			children: [/* @__PURE__ */ (0, n.jsx)("h3", { children: t }), r && /* @__PURE__ */ (0, n.jsx)("div", {
 				className: "cards-item-description",
-				dangerouslySetInnerHTML: { __html: i }
+				dangerouslySetInnerHTML: { __html: r }
 			})]
 		})]
 	});
 }
 function i({ items: e }) {
-	return /* @__PURE__ */ t("ul", {
+	return /* @__PURE__ */ (0, n.jsx)("ul", {
 		className: "cards-grid",
-		children: e.map((e, n) => /* @__PURE__ */ t("li", { children: /* @__PURE__ */ t(r, { ...e }) }, n))
+		children: e.map((e, t) => /* @__PURE__ */ (0, n.jsx)("li", { children: /* @__PURE__ */ (0, n.jsx)(r, { ...e }) }, t))
 	});
 }
-var a = e(i, { decorate: (e) => ({ items: [...e.querySelectorAll(":scope > div")].map((e) => {
+var a = t(i, { decorate: (e) => ({ items: [...e.querySelectorAll(":scope > div")].map((e) => {
 	let t = e.querySelector(":scope > div"), n = t?.cloneNode(!0), r = t?.querySelector("picture")?.outerHTML ?? "";
 	n?.querySelector("picture")?.remove();
 	let i = n?.querySelector("h1,h2,h3,h4,h5,h6")?.textContent?.trim() ?? "";
