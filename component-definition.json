@@ -203,34 +203,7 @@
           "plugins": {
             "da": {
               "name": "hero",
-              "rows": 4,
-              "columns": 1,
-              "fields": [
-                {
-                  "name": "image",
-                  "selector": "div:nth-child(1)>div>picture>img[src]"
-                },
-                {
-                  "name": "imageAlt",
-                  "selector": "div:nth-child(1)>div>picture>img[alt]"
-                },
-                {
-                  "name": "heading",
-                  "selector": "div:nth-child(2)>div"
-                },
-                {
-                  "name": "description",
-                  "selector": "div:nth-child(3)>div"
-                },
-                {
-                  "name": "ctaLabel",
-                  "selector": "div:nth-child(4)>div>p>a"
-                },
-                {
-                  "name": "ctaUrl",
-                  "selector": "div:nth-child(4)>div>p>a[href]"
-                }
-              ]
+              "type": "key-value-block"
             }
           }
         },
