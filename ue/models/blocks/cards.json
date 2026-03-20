@@ -1,0 +1,74 @@
+{
+  "definitions": [
+    {
+      "title": "Cards",
+      "id": "cards",
+      "model": "cards",
+      "filter": "cards",
+      "plugins": {
+        "da": {
+          "name": "cards",
+          "rows": 1,
+          "columns": 1
+        }
+      }
+    },
+    {
+      "title": "Cards Item",
+      "id": "cards-item",
+      "model": "cards-item",
+      "plugins": {
+        "da": {
+          "name": "cards-item",
+          "rows": 1,
+          "columns": 1,
+          "fields": [
+            { "name": "image", "selector": "div>picture>img[src]" },
+            { "name": "imageAlt", "selector": "div>picture>img[alt]" },
+            { "name": "title", "selector": "div>h2" },
+            { "name": "description", "selector": "div>p:first-of-type" }
+          ]
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "cards-item",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "imageAlt",
+          "label": "Image Alt"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "title",
+          "label": "Title",
+          "required": true
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "cards",
+      "components": ["cards-item"]
+    }
+  ]
+}

@@ -30,6 +30,12 @@
       "id": "section",
       "components": [
         "card",
+        "cards",
+        "columns",
+        "fragment",
+        "hero",
+        "posts",
+        "users",
         "text",
         "image"
       ]

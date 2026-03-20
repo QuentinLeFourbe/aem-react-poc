@@ -1,0 +1,34 @@
+{
+  "definitions": [
+    {
+      "title": "Posts",
+      "id": "posts",
+      "model": "posts",
+      "plugins": {
+        "da": {
+          "name": "posts",
+          "type": "key-value-block"
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "posts",
+      "fields": [
+        {
+          "component": "number",
+          "valueType": "number",
+          "name": "limit",
+          "label": "Number of posts",
+          "value": 10,
+          "validation": {
+            "numberMin": 1,
+            "numberMax": 100
+          }
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

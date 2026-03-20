@@ -1,0 +1,23 @@
+{
+  "definitions": [
+    {
+      "title": "Users",
+      "id": "users",
+      "model": "users",
+      "plugins": {
+        "da": {
+          "name": "users",
+          "rows": 1,
+          "columns": 1
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "users",
+      "fields": []
+    }
+  ],
+  "filters": []
+}
