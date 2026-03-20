@@ -186,4 +186,20 @@ async function loadPage() {
   loadDelayed();
 }
 
+// UE Editor support — load instrumentation only on UE da.live domains
+if (/\.(stage-ue|ue)\.da\.live$/.test(window.location.hostname)) {
+  // eslint-disable-next-line import/no-unresolved
+  await import(`${window.hlx.codeBasePath}/ue/scripts/ue.js`).then(({ default: ue }) => ue());
+}
+
 loadPage();
+
+(function da() {
+  const { searchParams } = new URL(window.location.href);
+  const lp = searchParams.get('dapreview');
+  // eslint-disable-next-line import/no-unresolved
+  if (lp) import('https://da.live/scripts/dapreview.js').then((mod) => mod.default(loadPage));
+  const exp = searchParams.get('daexperiment');
+  // eslint-disable-next-line import/no-unresolved
+  if (exp) import('https://da.live/nx/public/plugins/exp/exp.js');
+}());
