@@ -6,7 +6,7 @@
       "model": "card",
       "plugins": {
         "da": {
-          "name": "card",
+          "unsafeHTML": "<div class=\"card\"><div><div><picture><source type=\"image/webp\" srcset=\"\"><img src=\"\" alt=\"\"></picture><h2>Title</h2><p>Description</p><p><a href=\"/\">CTA</a></p></div></div></div>",
           "fields": [
             { "name": "image", "selector": "div>div>picture>img[src]" },
             { "name": "imageAlt", "selector": "div>div>picture>img[alt]" },

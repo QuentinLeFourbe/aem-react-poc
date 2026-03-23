@@ -19,14 +19,14 @@
       "model": "cards-item",
       "plugins": {
         "da": {
-          "name": "cards-item",
-          "rows": 1,
-          "columns": 1,
+          "unsafeHTML": "<div><div><picture><source type=\"image/webp\" srcset=\"\"><img src=\"\" alt=\"\"></picture><h3>New Card</h3><p>Description</p><p><a href=\"/\">CTA Label</a></p></div></div>",
           "fields": [
             { "name": "image", "selector": "div>picture>img[src]" },
             { "name": "imageAlt", "selector": "div>picture>img[alt]" },
-            { "name": "title", "selector": "div>h2" },
-            { "name": "description", "selector": "div>p:first-of-type" }
+            { "name": "title", "selector": "div>h3" },
+            { "name": "description", "selector": "div>p:first-of-type" },
+            { "name": "ctaLabel", "selector": "div>p:last-of-type>a" },
+            { "name": "ctaUrl", "selector": "div>p:last-of-type>a[href]" }
           ]
         }
       }
@@ -61,6 +61,18 @@
           "valueType": "string",
           "name": "description",
           "label": "Description"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "ctaLabel",
+          "label": "CTA Label"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "ctaUrl",
+          "label": "CTA URL"
         }
       ]
     }
